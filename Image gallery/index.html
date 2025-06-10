@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zoo Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 class="title">🐾 Zoo Animal Gallery 🐾</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('mammals')">Mammals</button>
+    <button onclick="filterImages('birds')">Birds</button>
+    <button onclick="filterImages('reptiles')">Reptiles</button>
+  </div>
+
+  <div class="gallery">
+    <div class="image mammals"><img src="https://tse2.mm.bing.net/th?id=OIP.Hec3oEkBHj2Emo3-fiC_gQHaE7&pid=Api&P=0&h=180" alt="Lion" onclick="openLightbox(this)" /></div>
+    <div class="image mammals"><img src="https://tse4.mm.bing.net/th?id=OIP.v-4c2PGkp8J_esOl3yKHbwHaE7&pid=Api&P=0&h=180" alt="Elephant" onclick="openLightbox(this)" /></div>
+    <div class="image birds"><img src="https://tse2.mm.bing.net/th?id=OIP.8UQYS9aCbADtZD-GgZs10AHaEc&pid=Api&P=0&h=180" alt="Eagle" onclick="openLightbox(this)" /></div>
+    <div class="image reptiles"><img src="https://tse3.mm.bing.net/th?id=OIP.bB9eFDCRTfFEh19Xn5GcOwHaFj&pid=Api&P=0&h=180" alt="Snake" onclick="openLightbox(this)" /></div>
+    
+  </div>c
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" />
+    <div class="nav">
+      <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+      <span class="next" onclick="changeImage(1)">&#10095;</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
